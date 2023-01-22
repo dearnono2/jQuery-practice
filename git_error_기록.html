@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+
+    git repository를 생성한 뒤 github에 push하려고 하자 오류가 발생.
+    아마도 처음 repository 생성 시 readme.md를 함께 생성한것이 원인인 모양이다.
+    이 때 main 브랜치가 디폴트로 되어버린듯!
+
+    난 평소에 master로만 push를 해왔기에 여느때처럼 git push origin master를 했더니 master branch가 따로 생겨버렸다. 
+    하나의 브랜치에 작업물을 올리고 싶어서 master branch를 삭제하고 모두 main에 업로드할 수 있도록하는 방법을 찾았는데 
+    -master 브랜치 제거 후 main 브랜치에 명령어 치고 push => error
+    -git 폴더 삭제 후 처음부터 진행. 원격 저장소와 연결 후 브랜치 명 변경 후 push => push보다 pull을 먼저 하라는 error
+    -pull 했지만 할게 없다고 error
+    -다시 다른 방법으로 push 했지만 failed to push some refs to "깃주소" error
+    
+    구글링을 하고 온갖 해결책들을 따라해봐도 계속 오류만 뜨고 해결이 되지 않았다.
+    .
+    .
+    결국 근본적인 원인과 해결방안은 못찾았지만 강제로 push를 진행하는 방법으로 임시 해결했다.
+    git push -u origin main
+
+    해결 참고 블로그 주소 출처: https://doozi316.github.io/errorlog/2019/09/30/error1/
+
+    git에 대해 공부가 필요하다..!
+
+  -->
+</body>
+</html>
