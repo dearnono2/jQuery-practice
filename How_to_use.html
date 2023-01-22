@@ -27,6 +27,22 @@
     -다양한 플러그인이 존재한다.
     -브라우저 호환성 문제를 해결해준다.
 
+    //
+
+    실행 시점을 제어하는 코드
+    $('선택자').on('이벤트 타입', function() {
+      임의처리
+    })
+
+    < jQuery 이벤트 타입 >
+    keydown : 요소에 초점을 맞춘 상태에서 키보드의 키를 눌렀을 때
+    keyup : 요소에 초점을 맞춘 상태에서 키보드의 키를 뗄 때
+    focus : 요소에 포커스가 일치했을 때 (포커스가 있는 요소만)
+    blur : 요소가 포커스를 잃어버렸을 때 (포커스가 있는 요소만)
+    change : 입력 내용이 변경되었을 때 (textarea요소, input요소, select요소 등)
+    resize : 요소의 크기를 다시 설정했을 때
+    scroll : 요소를 스크롤했을 때
+
   -->
 
   
@@ -38,5 +54,6 @@
     <div class="box">3</div>
   </div>
   <p id="lens">practice</p>
+  <img src="images/01.jpg" alt="image 1">
 </body>
 </html>
