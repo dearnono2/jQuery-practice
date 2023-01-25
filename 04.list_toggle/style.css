@@ -1,0 +1,54 @@
+* {
+  margin: 0; padding: 0; 
+  box-sizing: border-box;
+}
+
+ul,ol,li {
+  list-style: none;
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+ul{
+  border:1px solid red;
+  width:400px
+}
+
+ul li{
+  width: 100%;
+  border-bottom: 1px solid red
+}
+
+ul li img{
+  width: 100%;
+  display: none
+}
+
+ul li.on img{
+  display: block
+}
+
+ul li button{
+  width: 100%;
+  padding: 1rem;
+  background-color:#fff;
+  border: none;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between}
+
+ul li button span{
+  cursor: pointer
+}
+
+ul li button span:nth-child(2) {
+  background-color: pink;
+  padding: 10px;
+  border-radius: 50%;
+}
