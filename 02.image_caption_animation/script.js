@@ -1,4 +1,5 @@
 $(function() {
+  // 아래와 같이 쉼표로 구분해서 변수 여러개를 선언하는 방식은 좋지 않다.
   let $duration = 300,
       $image = $('#images p');
 
