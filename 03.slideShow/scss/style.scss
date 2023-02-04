@@ -1,0 +1,15 @@
+.slideshow {
+  background: #000;
+  height: 465px; min-width: 960px;
+  overflow: hidden;
+  position: relative;
+  .slideshow_slides {
+    position: absolute;
+    width: 100%; height: 100%;
+    a {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
