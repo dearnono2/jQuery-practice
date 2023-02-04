@@ -12,4 +12,40 @@
       transform: translateX(-50%);
     }
   }
+  .slideshow_nav {
+    a {
+      position: absolute;
+      width: 71px; height: 71px;
+      top: 50%;
+      left: 50%; 
+      transform: translate(-50%,-50%);
+      text-indent: -9999em;
+    }
+    .prev {
+      background: #fff;
+      margin-left: -480px;
+      // background-image: url();
+    }
+    .next {
+      background: #fff;
+      margin-left: 409px;
+      // background-image: url();
+    }
+  }
+  .indicator {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 0; right: 0;
+    a {
+      margin: 0 5px;
+      text-indent: -9999em;
+      // background: url() no-repeat;
+      &.active {
+        // active가 활성화될 경우 바뀔 이미지
+        // background: url();
+      }
+    }
+  }
 }
