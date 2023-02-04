@@ -25,6 +25,9 @@
   transform: translate(-50%, -50%);
   text-indent: -9999em;
 }
+.slideshow .slideshow_nav a.disabled {
+  display: none;
+}
 .slideshow .slideshow_nav .prev {
   background: #fff;
   margin-left: -480px;
@@ -44,6 +47,12 @@
 .slideshow .indicator a {
   margin: 0 5px;
   text-indent: -9999em;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+}
+.slideshow .indicator a.active {
+  background-color: blue;
 }
 
 /*# sourceMappingURL=style.css.map */

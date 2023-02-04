@@ -21,6 +21,9 @@
       left: 50%; 
       transform: translate(-50%,-50%);
       text-indent: -9999em;
+      &.disabled {
+        display: none;
+      }
     }
     .prev {
       background: #fff;
@@ -43,9 +46,12 @@
       margin: 0 5px;
       text-indent: -9999em;
       // background: url() no-repeat;
+      background-color: #fff;
+      width: 10px; height: 10px;
       &.active {
         // active가 활성화될 경우 바뀔 이미지
         // background: url();
+        background-color: blue;
       }
     }
   }
