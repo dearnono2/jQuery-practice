@@ -8,8 +8,9 @@
     width: 100%; height: 100%;
     a {
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      width: 100%; height: 100%;
+      // 엘리먼트 안의 구성요소가 텍스트나 inline계열일 떄 text-align으로 수평중앙에 배치할 수 있다
+      text-align: center;
     }
   }
   .slideshow_nav {
