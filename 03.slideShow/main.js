@@ -82,5 +82,28 @@ $(function() {
   // 맨 처음에 함수가 실행되어 prev버튼이 disabled 처리되게 하기 위해 currentIndex값이 0인것을 인식시켜줌. 
   updateNav();
 
+  
+  // 자동 슬라이드 넘김 함수
+  function startTimer() {
+    // 일정 시간마다 할일
+    timer = setInterval(function() {
+      let nextIndex = (currentIndex + 1) % slideCount;
+      goToSlide(nextIndex);
+    }, interval);
+  }
+
+  startTimer();
+
+  function stopTimer() {
+    clearInterval(timer);
+  }
+
+  // 마우스 올리면 자동넘김 멈춤, 떼면 자동 넘김 진행
+  container.mouseenter(function() {
+    stopTimer();
+  })
+  .mouseleave(function() {
+    startTimer();
+  })
 
 })
