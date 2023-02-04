@@ -51,6 +51,13 @@ $(function() {
     } else {
       navNext.removeClass('disabled');
     }
+
+    // 방법 1) 모든 요소에서 active를 뺴고, 원하는 요소에만 active를 추가하기
+    indicator.find('a').removeClass('active');
+    indicator.find('a').eq(currentIndex).addClass('active');
+
+    // 방법 2) 원하는 요소에만 active를 추가하고, 나머지 요소들에서 active를 뺴기
+    // indicator.find('a').eq(currentIndex).addClass('active').siblings().removeClass('active');
   }
 
 
@@ -59,7 +66,7 @@ $(function() {
     e.preventDefault();
     let idx = $(this).index();
     goToSlide(idx);
-    console.log(currentIndex);
+    // console.log(currentIndex);
   });
 
   // 좌우 버튼을 클릭하면 이동하기
@@ -74,5 +81,6 @@ $(function() {
 
   // 맨 처음에 함수가 실행되어 prev버튼이 disabled 처리되게 하기 위해 currentIndex값이 0인것을 인식시켜줌. 
   updateNav();
+
 
 })
