@@ -12,30 +12,37 @@
 */
 
 $(function() {
+  // 중복 실행 방지
+  let executed = false;  // 아직 실행 안됨.
   $(window).scroll(function() {
     // section2가 브라우저 화면에서 떨어진 거리에서 -300
     let threshold = $('.section2').offset().top - 300;
 
-    if($(window).scrollTop() >= threshold) {
-      let progressRate = $('.animate').attr('data-rate');
-      // animate progress 사용자속성 값 percent -> 60%
+    // if(excuted == false)
+    if(!executed) {
+      // 아직 실행된 적이 없을 때 작동해야 하는 것들.
+      if($(window).scrollTop() >= threshold) {
+        let progressRate = $('.animate').attr('data-rate');
+        // animate progress 사용자속성 값 percent -> 60%
 
-      /**
-        $('.box).animate({width:100%, height:100%}),
-        {
+        /**
+          $('.box).animate({width:100%, height:100%}),
+          {
+            duration: 1500,
+            easing: 'easeOutQuint',
+            conplete: function(){...끝나고 할일},
+            progress: function(){...진행중 할일}
+          }
+        */
+        $({percent: 0}).animate({percent:progressRate}, {
           duration: 1500,
-          easing: 'easeOutQuint',
-          conplete: function(){...끝나고 할일},
-          progress: function(){...진행중 할일}
-        }
-      */
-      $({percent: 0}).animate({percent:progressRate}, {
-        duration: 1500,
-        progress: function() {
-          let now = this.percent;
-          $('.animate').text(now);
-        }
-      })
+          progress: function() {
+            let now = this.percent;
+            $('.animate').text(Math.ceil(now)+'%');
+          }
+        });
+        executed = true;
+      }
     }
   })
 })
